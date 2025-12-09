@@ -1,0 +1,140 @@
+openapi: 3.0.4
+info:
+  title: Lottery Number Generator
+  description: Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/lotterypicker:
+    get:
+      summary: Generate Lottery Numbers
+      description: Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations.
+      operationId: lotterypicker
+      parameters:
+      - name: game
+        default: custom
+        in: query
+        schema:
+          type: string
+        required: false
+        description: Lottery game preset (custom, powerball, megamillions, euromillions, eurojackpot, lotto649)
+        example: powerball
+      - name: numbers
+        default: '6'
+        in: query
+        schema:
+          type: number
+        required: false
+        description: Number of main numbers to pick (1-20) - for custom game
+        example: '6'
+      - name: max
+        default: '49'
+        in: query
+        schema:
+          type: number
+        required: false
+        description: Maximum number for main numbers (10-100) - for custom game
+        example: '49'
+      - name: bonus
+        default: '0'
+        in: query
+        schema:
+          type: number
+        required: false
+        description: Number of bonus numbers (0-5) - for custom game
+        example: '1'
+      - name: tickets
+        default: '1'
+        in: query
+        schema:
+          type: number
+        required: false
+        description: Number of tickets to generate (1-100)
+        example: '3'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  game: Powerball (US)
+                  game_type: powerball
+                  config:
+                    main_numbers_count: 5
+                    main_numbers_range: 1-69
+                    bonus_numbers_count: 1
+                    bonus_numbers_range: 1-26
+                  tickets_generated: 3
+                  tickets:
+                  - ticket_number: 1
+                    main_numbers:
+                    - 24
+                    - 27
+                    - 65
+                    - 66
+                    - 69
+                    bonus_numbers:
+                    - 11
+                  - ticket_number: 2
+                    main_numbers:
+                    - 2
+                    - 12
+                    - 40
+                    - 55
+                    - 64
+                    bonus_numbers:
+                    - 4
+                  - ticket_number: 3
+                    main_numbers:
+                    - 11
+                    - 29
+                    - 35
+                    - 43
+                    - 46
+                    bonus_numbers:
+                    - 8
+                  available_games:
+                  - custom
+                  - powerball
+                  - megamillions
+                  - euromillions
+                  - eurojackpot
+                  - lotto649
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
