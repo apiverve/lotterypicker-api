@@ -15,11 +15,11 @@ const api = new lotterypickerAPI({
 
 // Example query
 var query = {
-  game: "powerball",
+  game: "custom",
   numbers: 6,
   max: 49,
-  bonus: 1,
-  tickets: 3
+  bonus: 0,
+  tickets: 1
 };
 
 // Make the API request using callback
