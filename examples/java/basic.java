@@ -12,16 +12,8 @@ public class BasicExample {
         LotteryNumberGeneratorAPIClient client = new LotteryNumberGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Query parameters
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;game&quot;, &quot;powerball&quot;);
-        parameters.put(&quot;numbers&quot;, 6);
-        parameters.put(&quot;max&quot;, 49);
-        parameters.put(&quot;bonus&quot;, 1);
-        parameters.put(&quot;tickets&quot;, 3);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
