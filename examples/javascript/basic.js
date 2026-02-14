@@ -13,16 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/lotterypicker';
  */
 async function callLotteryNumberGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            game: &#x27;powerball&#x27;,
-            numbers: 6,
-            max: 49,
-            bonus: 1,
-            tickets: 3
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
