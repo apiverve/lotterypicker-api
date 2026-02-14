@@ -17,14 +17,11 @@ def call_lotterypicker_api():
     Make a GET request to the Lottery Number Generator API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;game&#x27;: &#x27;powerball&#x27;, &#x27;numbers&#x27;: 6, &#x27;max&#x27;: 49, &#x27;bonus&#x27;: 1, &#x27;tickets&#x27;: 3}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
