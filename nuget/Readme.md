@@ -1,4 +1,4 @@
-APIVerve.API.LotteryNumberGenerator API
+LotteryNumberGenerator API
 ============
 
 Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations.
@@ -7,7 +7,7 @@ Lottery Number Generator creates random lottery numbers for various popular game
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [APIVerve.API.LotteryNumberGenerator API](https://apiverve.com/marketplace/lotterypicker)
+This is a .NET Wrapper for the [LotteryNumberGenerator API](https://apiverve.com/marketplace/lotterypicker?utm_source=nuget&utm_medium=readme)
 
 ---
 
@@ -41,7 +41,7 @@ From within Visual Studio:
 ## Configuration
 
 Before using the lotterypicker API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
 
 ---
 
@@ -60,12 +60,12 @@ class Program
         // Initialize the API client
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+        var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
         // Make the API call
@@ -96,13 +96,13 @@ class Program
 
 ## Usage
 
-The APIVerve.API.LotteryNumberGenerator API documentation is found here: [https://docs.apiverve.com/ref/lotterypicker](https://docs.apiverve.com/ref/lotterypicker).
+The LotteryNumberGenerator API documentation is found here: [https://docs.apiverve.com/ref/lotterypicker](https://docs.apiverve.com/ref/lotterypicker?utm_source=nuget&utm_medium=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-APIVerve.API.LotteryNumberGenerator API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+LotteryNumberGenerator API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -128,12 +128,12 @@ public class Example
     {
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+        var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -164,12 +164,12 @@ public class Example
     {
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+        var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
         var response = apiClient.Execute(queryOptions);
@@ -205,12 +205,12 @@ public class Example
     {
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+        var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
         try
@@ -265,12 +265,12 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+        var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
         try
@@ -310,12 +310,12 @@ var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -340,12 +340,12 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -362,12 +362,12 @@ var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -380,12 +380,12 @@ The API client implements `IDisposable` for proper resource cleanup:
 ```csharp
 using (var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]"))
 {
-    var queryOptions = new LotteryNumberGeneratorQueryOptions {
-  game = "powerball",
+    var queryOptions = new QueryOptions {
+  game = "custom",
   numbers = 6,
   max = 49,
   bonus = 1,
-  tickets = 3
+  tickets = 1
 };
     var response = await apiClient.ExecuteAsync(queryOptions);
     Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented));
@@ -468,7 +468,7 @@ using (var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
 
 ---
 
@@ -479,14 +479,14 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
 
 ---
 
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
