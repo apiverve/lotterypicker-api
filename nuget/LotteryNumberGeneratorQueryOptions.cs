@@ -11,36 +11,31 @@ namespace APIVerve.API.LotteryNumberGenerator
     public class LotteryNumberGeneratorQueryOptions
     {
         /// <summary>
-        /// Lottery game preset (custom, powerball, megamillions, euromillions, eurojackpot, lotto649)
-        /// Example: powerball
+        /// Lottery game preset
         /// </summary>
         [JsonProperty("game")]
         public string Game { get; set; }
 
         /// <summary>
-        /// Number of main numbers to pick (1-20) - for custom game
-        /// Example: 6
+        /// Number of main numbers to pick (for custom game)
         /// </summary>
         [JsonProperty("numbers")]
         public string Numbers { get; set; }
 
         /// <summary>
-        /// Maximum number for main numbers (10-100) - for custom game
-        /// Example: 49
+        /// Maximum number for main numbers (for custom game)
         /// </summary>
         [JsonProperty("max")]
         public string Max { get; set; }
 
         /// <summary>
-        /// Number of bonus numbers (0-5) - for custom game
-        /// Example: 1
+        /// Number of bonus numbers (for custom game)
         /// </summary>
         [JsonProperty("bonus")]
         public string Bonus { get; set; }
 
         /// <summary>
-        /// Number of tickets to generate (1-100)
-        /// Example: 3
+        /// Number of tickets to generate
         /// </summary>
         [JsonProperty("tickets")]
         public string Tickets { get; set; }
