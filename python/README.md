@@ -44,7 +44,13 @@ from apiverve_lotterynumbergenerator.apiClient import LotterypickerAPIClient
 # Initialize the client with your APIVerve API key
 api = LotterypickerAPIClient("[YOUR_API_KEY]")
 
-query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
 
 try:
     # Make the API call
@@ -82,7 +88,13 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
 ```
 
 ###### Simple Request
@@ -177,7 +189,13 @@ from apiverve_lotterynumbergenerator.apiClient import LotterypickerAPIClient, Lo
 
 api = LotterypickerAPIClient("[YOUR_API_KEY]")
 
-query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
 
 try:
     result = api.execute(query)
@@ -198,7 +216,13 @@ from apiverve_lotterynumbergenerator.apiClient import LotterypickerAPIClient, Lo
 
 api = LotterypickerAPIClient("[YOUR_API_KEY]")
 
-query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
 
 try:
     result = api.execute(query)
@@ -232,7 +256,13 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_lotterynumbergenerator.apiClient import LotterypickerAPIClient, LotterypickerAPIClientError
 
-query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
 
 # Using context manager ensures proper cleanup
 with LotterypickerAPIClient("[YOUR_API_KEY]") as api:
@@ -258,7 +288,13 @@ from apiverve_lotterynumbergenerator.apiClient import LotterypickerAPIClient
 # Enable debug mode
 api = LotterypickerAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -273,8 +309,15 @@ from apiverve_lotterynumbergenerator.apiClient import LotterypickerAPIClient
 
 api = LotterypickerAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "game": "custom",
+    "numbers": 6,
+    "max": 49,
+    "bonus": 1,
+    "tickets": 1
+}
+
 try:
-    query = { "game": "custom", "numbers": 6, "max": 49, "bonus": 1, "tickets": 1 }
     result = api.execute(query)
     print(result)
 finally:
