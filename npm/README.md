@@ -147,50 +147,42 @@ async function makeRequest() {
       {
         "ticket_number": 1,
         "main_numbers": [
-          24,
-          27,
-          65,
-          66,
-          69
+          11,
+          12,
+          51,
+          53,
+          58
         ],
         "bonus_numbers": [
-          11
+          3
         ]
       },
       {
         "ticket_number": 2,
         "main_numbers": [
-          2,
-          12,
-          40,
-          55,
-          64
+          4,
+          24,
+          28,
+          46,
+          61
         ],
         "bonus_numbers": [
-          4
+          3
         ]
       },
       {
         "ticket_number": 3,
         "main_numbers": [
-          11,
+          12,
+          13,
           29,
-          35,
-          43,
-          46
+          49,
+          60
         ],
         "bonus_numbers": [
-          8
+          6
         ]
       }
-    ],
-    "available_games": [
-      "custom",
-      "powerball",
-      "megamillions",
-      "euromillions",
-      "eurojackpot",
-      "lotto649"
     ]
   }
 }
