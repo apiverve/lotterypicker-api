@@ -4,34 +4,45 @@ declare module '@apiverve/lotterypicker' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface lotterypickerResponse {
     status: string;
     error: string | null;
     data: LotteryNumberGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface LotteryNumberGeneratorData {
-      game:             string;
-      gameType:         string;
+      game:             null | string;
+      gameType:         null | string;
       config:           Config;
-      ticketsGenerated: number;
+      ticketsGenerated: number | null;
       tickets:          Ticket[];
-      availableGames:   string[];
   }
   
   interface Config {
-      mainNumbersCount:  number;
-      mainNumbersRange:  string;
-      bonusNumbersCount: number;
-      bonusNumbersRange: string;
+      mainNumbersCount:  number | null;
+      mainNumbersRange:  null | string;
+      bonusNumbersCount: number | null;
+      bonusNumbersRange: null | string;
   }
   
   interface Ticket {
-      ticketNumber: number;
-      mainNumbers:  number[];
-      bonusNumbers: number[];
+      ticketNumber: number | null;
+      mainNumbers:  (number | null)[];
+      bonusNumbers: (number | null)[];
   }
 
   export default class lotterypickerWrapper {
