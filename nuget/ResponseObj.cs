@@ -25,6 +25,9 @@ namespace APIVerve.API.LotteryNumberGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,25 +42,22 @@ namespace APIVerve.API.LotteryNumberGenerator
         public Config Config { get; set; }
 
         [JsonProperty("tickets_generated")]
-        public long TicketsGenerated { get; set; }
+        public long? TicketsGenerated { get; set; }
 
         [JsonProperty("tickets")]
         public Ticket[] Tickets { get; set; }
-
-        [JsonProperty("available_games")]
-        public string[] AvailableGames { get; set; }
     }
 
     public partial class Config
     {
         [JsonProperty("main_numbers_count")]
-        public long MainNumbersCount { get; set; }
+        public long? MainNumbersCount { get; set; }
 
         [JsonProperty("main_numbers_range")]
         public string MainNumbersRange { get; set; }
 
         [JsonProperty("bonus_numbers_count")]
-        public long BonusNumbersCount { get; set; }
+        public long? BonusNumbersCount { get; set; }
 
         [JsonProperty("bonus_numbers_range")]
         public string BonusNumbersRange { get; set; }
@@ -66,12 +66,24 @@ namespace APIVerve.API.LotteryNumberGenerator
     public partial class Ticket
     {
         [JsonProperty("ticket_number")]
-        public long TicketNumber { get; set; }
+        public long? TicketNumber { get; set; }
 
         [JsonProperty("main_numbers")]
-        public long[] MainNumbers { get; set; }
+        public long?[] MainNumbers { get; set; }
 
         [JsonProperty("bonus_numbers")]
-        public long[] BonusNumbers { get; set; }
+        public long?[] BonusNumbers { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
