@@ -20,24 +20,24 @@ namespace APIVerve.API.LotteryNumberGenerator
         /// Number of main numbers to pick (for custom game)
         /// </summary>
         [JsonProperty("numbers")]
-        public string Numbers { get; set; }
+        public int? Numbers { get; set; }
 
         /// <summary>
         /// Maximum number for main numbers (for custom game)
         /// </summary>
         [JsonProperty("max")]
-        public string Max { get; set; }
+        public int? Max { get; set; }
 
         /// <summary>
         /// Number of bonus numbers (for custom game)
         /// </summary>
         [JsonProperty("bonus")]
-        public string Bonus { get; set; }
+        public int? Bonus { get; set; }
 
         /// <summary>
         /// Number of tickets to generate
         /// </summary>
         [JsonProperty("tickets")]
-        public string Tickets { get; set; }
+        public int? Tickets { get; set; }
     }
 }
