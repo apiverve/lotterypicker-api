@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.LotteryNumberGenerator;
 
 class Program
 {
@@ -60,12 +60,12 @@ class Program
         // Initialize the API client
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+        var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
         // Make the API call
@@ -120,7 +120,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.LotteryNumberGenerator;
 
 public class Example
 {
@@ -128,12 +128,12 @@ public class Example
     {
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+        var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -156,7 +156,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.LotteryNumberGenerator;
 
 public class Example
 {
@@ -164,12 +164,12 @@ public class Example
     {
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+        var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
         var response = apiClient.Execute(queryOptions);
@@ -197,7 +197,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.LotteryNumberGenerator;
 
 public class Example
 {
@@ -205,12 +205,12 @@ public class Example
     {
         var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+        var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
         try
@@ -253,7 +253,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.LotteryNumberGenerator;
 
 public class Example
 {
@@ -265,12 +265,12 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+        var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
         try
@@ -310,12 +310,12 @@ var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -340,12 +340,12 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -362,12 +362,12 @@ var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -378,12 +378,12 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new QueryOptions {
-    game = "custom",
-    numbers = 6,
-    max = 49,
-    bonus = 1,
-    tickets = 1
+var queryOptions = new LotteryNumberGeneratorQueryOptions {
+    Game = "custom",
+    Numbers = 6,
+    Max = 49,
+    Bonus = 1,
+    Tickets = 1
 };
 
 using (var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]"))
@@ -416,50 +416,42 @@ using (var apiClient = new LotteryNumberGeneratorAPIClient("[YOUR_API_KEY]"))
       {
         "ticket_number": 1,
         "main_numbers": [
-          24,
-          27,
-          65,
-          66,
-          69
+          11,
+          12,
+          51,
+          53,
+          58
         ],
         "bonus_numbers": [
-          11
+          3
         ]
       },
       {
         "ticket_number": 2,
         "main_numbers": [
-          2,
-          12,
-          40,
-          55,
-          64
+          4,
+          24,
+          28,
+          46,
+          61
         ],
         "bonus_numbers": [
-          4
+          3
         ]
       },
       {
         "ticket_number": 3,
         "main_numbers": [
-          11,
+          12,
+          13,
           29,
-          35,
-          43,
-          46
+          49,
+          60
         ],
         "bonus_numbers": [
-          8
+          6
         ]
       }
-    ],
-    "available_games": [
-      "custom",
-      "powerball",
-      "megamillions",
-      "euromillions",
-      "eurojackpot",
-      "lotto649"
     ]
   }
 }
