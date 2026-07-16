@@ -195,11 +195,77 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Lottery Number Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "game": "Powerball (US)",
+    "game_type": "powerball",
+    "config": {
+      "main_numbers_count": 5,
+      "main_numbers_range": "1-69",
+      "bonus_numbers_count": 1,
+      "bonus_numbers_range": "1-26"
+    },
+    "tickets_generated": 3,
+    "tickets": [
+      {
+        "ticket_number": 1,
+        "main_numbers": [
+          11,
+          12,
+          51,
+          53,
+          58
+        ],
+        "bonus_numbers": [
+          3
+        ]
+      },
+      {
+        "ticket_number": 2,
+        "main_numbers": [
+          4,
+          24,
+          28,
+          46,
+          61
+        ],
+        "bonus_numbers": [
+          3
+        ]
+      },
+      {
+        "ticket_number": 3,
+        "main_numbers": [
+          12,
+          13,
+          29,
+          49,
+          60
+        ],
+        "bonus_numbers": [
+          6
+        ]
+      }
+    ]
+  }
 }
 ```
 
