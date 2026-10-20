@@ -30,7 +30,7 @@ class lotterypickerWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/lotterypicker';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"game":{"type":"string","required":false,"default":"custom"},"numbers":{"type":"integer","required":false,"min":1,"max":20,"default":6},"max":{"type":"integer","required":false,"min":10,"max":100,"default":49},"bonus":{"type":"integer","required":false,"min":0,"max":5,"default":0},"tickets":{"type":"integer","required":false,"min":1,"max":25,"default":1}};
+        this.validationRules = {"game":{"type":"string","required":false,"default":"custom"},"numbers":{"type":"integer","required":false,"min":1,"max":20,"default":6},"max":{"type":"integer","required":false,"min":10,"max":100,"default":49},"bonus":{"type":"integer","required":false,"min":0,"max":5,"default":0},"tickets":{"type":"integer","required":false,"min":1,"max":25,"default":1},"bonusmax":{"type":"integer","required":false,"min":1,"default":10}};
     }
 
     /**

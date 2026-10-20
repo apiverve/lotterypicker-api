@@ -19,7 +19,8 @@ var query = {
   numbers: 6,
   max: 49,
   bonus: 0,
-  tickets: 1
+  tickets: 1,
+  bonusmax: 10
 };
 
 // Make the API request using callback
