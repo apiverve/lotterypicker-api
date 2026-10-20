@@ -39,5 +39,11 @@ namespace APIVerve.API.LotteryNumberGenerator
         /// </summary>
         [JsonProperty("tickets")]
         public int? Tickets { get; set; }
+
+        /// <summary>
+        /// Highest value a bonus ball can take. Only applies when game is custom; named games use their own rules
+        /// </summary>
+        [JsonProperty("bonusmax")]
+        public int? Bonusmax { get; set; }
     }
 }

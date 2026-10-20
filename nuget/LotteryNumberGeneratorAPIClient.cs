@@ -71,7 +71,8 @@ namespace APIVerve.API.LotteryNumberGenerator
             { "numbers", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 20 } },
             { "max", new ValidationRule { Type = "integer", Required = false, Min = 10, Max = 100 } },
             { "bonus", new ValidationRule { Type = "integer", Required = false, Min = 0, Max = 5 } },
-            { "tickets", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 25 } }
+            { "tickets", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 25 } },
+            { "bonusmax", new ValidationRule { Type = "integer", Required = false, Min = 1 } }
         };
 
         /// <summary>Format validation patterns</summary>
