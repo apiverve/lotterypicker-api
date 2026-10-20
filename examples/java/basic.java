@@ -19,6 +19,7 @@ public class BasicExample {
         parameters.put(&quot;max&quot;, 49);
         parameters.put(&quot;bonus&quot;, 1);
         parameters.put(&quot;tickets&quot;, 3);
+        parameters.put(&quot;bonusmax&quot;, 26);
 
             // Execute the API request
             APIResponse response = client.execute(parameters);

@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/lotterypicker:
     get:
-      summary: Generate Lottery Numbers
+      summary: Lottery Number Generator
       description: Generate random lottery numbers for various games
       operationId: lotterypicker
       parameters:
@@ -58,6 +58,15 @@ paths:
           required: false
           description: Number of tickets to generate
           example: 3
+        - name: bonusmax
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: >-
+            Highest value a bonus ball can take. Only applies when game is
+            custom; named games use their own rules
+          example: 26
       responses:
         '200':
           description: Successful Response

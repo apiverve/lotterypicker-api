@@ -19,7 +19,8 @@ async function callLotteryNumberGeneratorAPI() {
             numbers: 6,
             max: 49,
             bonus: 1,
-            tickets: 3
+            tickets: 3,
+            bonusmax: 26
         });
 
     const response = await fetch(`${API_URL}?${params}`, {
