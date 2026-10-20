@@ -3,11 +3,10 @@ Lottery Number Generator API
 
 Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Lottery Number Generator API](https://apiverve.com/marketplace/lotterypicker?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-lotterynumbergenerator.svg)](https://pypi.org/project/apiverve-lotterynumbergenerator/)
+
+This is a Python wrapper for the [Lottery Number Generator API](https://apiverve.com/marketplace/lotterypicker?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-lotterynumbergenerator
 
 ## Configuration
 
-Before using the lotterypicker API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Lottery Number Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -49,7 +48,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 
 try:
@@ -66,7 +66,7 @@ except Exception as e:
 
 ## Usage
 
-The Lottery Number Generator API documentation is found here: [https://docs.apiverve.com/ref/lotterypicker](https://docs.apiverve.com/ref/lotterypicker?utm_source=pypi&utm_medium=readme).
+The Lottery Number Generator API documentation is found here: [https://docs.apiverve.com/ref/lotterypicker](https://docs.apiverve.com/ref/lotterypicker?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -93,7 +93,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 ```
 
@@ -127,50 +128,42 @@ print(result)
       {
         "ticket_number": 1,
         "main_numbers": [
-          24,
-          27,
-          65,
-          66,
-          69
+          11,
+          12,
+          51,
+          53,
+          58
         ],
         "bonus_numbers": [
-          11
+          3
         ]
       },
       {
         "ticket_number": 2,
         "main_numbers": [
-          2,
-          12,
-          40,
-          55,
-          64
+          4,
+          24,
+          28,
+          46,
+          61
         ],
         "bonus_numbers": [
-          4
+          3
         ]
       },
       {
         "ticket_number": 3,
         "main_numbers": [
-          11,
+          12,
+          13,
           29,
-          35,
-          43,
-          46
+          49,
+          60
         ],
         "bonus_numbers": [
-          8
+          6
         ]
       }
-    ],
-    "available_games": [
-      "custom",
-      "powerball",
-      "megamillions",
-      "euromillions",
-      "eurojackpot",
-      "lotto649"
     ]
   }
 }
@@ -194,7 +187,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 
 try:
@@ -221,7 +215,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 
 try:
@@ -261,7 +256,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 
 # Using context manager ensures proper cleanup
@@ -293,7 +289,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 
 # Debug information will be printed to console
@@ -314,7 +311,8 @@ query = {
     "numbers": 6,
     "max": 49,
     "bonus": 1,
-    "tickets": 1
+    "tickets": 1,
+    "bonusmax": 10
 }
 
 try:
@@ -329,7 +327,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -340,12 +338,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

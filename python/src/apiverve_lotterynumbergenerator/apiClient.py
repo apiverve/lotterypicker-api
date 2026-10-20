@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -28,7 +28,8 @@ class LotterypickerAPIClient:
         "numbers": {"type": "integer", "required": False, "min": 1, "max": 20, "default": 6},
         "max": {"type": "integer", "required": False, "min": 10, "max": 100, "default": 49},
         "bonus": {"type": "integer", "required": False, "min": 0, "max": 5, "default": 0},
-        "tickets": {"type": "integer", "required": False, "min": 1, "max": 25, "default": 1}
+        "tickets": {"type": "integer", "required": False, "min": 1, "max": 25, "default": 1},
+        "bonusmax": {"type": "integer", "required": False, "min": 1, "default": 10}
     }
 
     # Format validation patterns
