@@ -1,7 +1,7 @@
 {
     "name": "apiverve/lotterypicker",
     "description": "Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations.",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "lotterypicker",
-        "lottery",
-        "lottery numbers",
-        "random numbers",
-        "powerball",
-        "mega millions"
+        "lottery number generator api",
+        "lottery api",
+        "powerball number generator api",
+        "lottery picker",
+        "quick pick numbers"
     ],
-    "homepage": "https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/lotterypicker",
