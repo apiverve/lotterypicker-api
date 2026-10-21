@@ -32,7 +32,8 @@ $response = $client->execute([
     'numbers' => 6,
     'max' => 49,
     'bonus' => 1,
-    'tickets' => 1
+    'tickets' => 1,
+    'bonusmax' => 10
 ]);
 
 // Print the response
@@ -48,7 +49,7 @@ use APIVerve\Lotterypicker\Exceptions\APIException;
 use APIVerve\Lotterypicker\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['game' => 'custom', 'numbers' => 6, 'max' => 49, 'bonus' => 1, 'tickets' => 1]);
+    $response = $client->execute(['game' => 'custom', 'numbers' => 6, 'max' => 49, 'bonus' => 1, 'tickets' => 1, 'bonusmax' => 10]);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -136,11 +137,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/lotterypicker?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/lotterypicker?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License

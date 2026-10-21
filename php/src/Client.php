@@ -15,11 +15,11 @@ use APIVerve\Lotterypicker\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['game' => 'custom', 'numbers' => 6, 'max' => 49, 'bonus' => 1, 'tickets' => 1]);
+ * $response = $client->execute(['game' => 'custom', 'numbers' => 6, 'max' => 49, 'bonus' => 1, 'tickets' => 1, 'bonusmax' => 10]);
  * print_r($response);
  * ```
  *
- * @see https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/lotterypicker?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -38,7 +38,8 @@ class Client
         'numbers' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 20],
         'max' => ['type' => 'integer', 'required' => false, 'min' => 10, 'max' => 100],
         'bonus' => ['type' => 'integer', 'required' => false, 'min' => 0, 'max' => 5],
-        'tickets' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 25]
+        'tickets' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 25],
+        'bonusmax' => ['type' => 'integer', 'required' => false, 'min' => 1]
     ];
 
     /**
