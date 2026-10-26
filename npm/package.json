@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/lotterypicker",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations.",
   "main": "index.js",
   "types": "index.d.ts",
