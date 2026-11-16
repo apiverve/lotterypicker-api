@@ -1,6 +1,6 @@
 name: apiverve_lotterypicker
 description: "Lottery Number Generator creates random lottery numbers for various popular games including Powerball, Mega Millions, EuroMillions, and custom lottery configurations."
-version: 1.2.5
+version: 1.2.6
 homepage: https://apiverve.com/marketplace/lotterypicker?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/lotterypicker-api/tree/main/dart
 
